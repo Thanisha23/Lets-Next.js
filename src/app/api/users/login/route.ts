@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       email: user.email,
     };
     // create token
-    const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET, {
+    const token = await jwt.sign(tokenData, "litchi", {
       expiresIn: "1d",
     });
 
